@@ -1,5 +1,5 @@
 # Help
 ## System Free
-Sistema Grátis De Plugin De /ajuda, Com Config Etc.
-## Como Configuro
-Coloque Na Configuração A Mensagem, Colocando {n} Você Consegue Fazer Um Pulo De Linha, E Por Enquanto Use \n Mesmo, Vou Corregir Um Erro
+Sistem Of /helpme For MCPE 0.15.10, 0.14.3
+## How to configure
+In the space that appears, place the message
