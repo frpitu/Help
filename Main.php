@@ -21,9 +21,9 @@ class Main extends PluginBase {
     $this->config = new Config($this->getDataFolder()."config.yml", Config::YAML);
     }
     public function onCommand(CommandSender $sender, Command $command, $label, array $args) {
-        if ($command->getName() === "ajuda") {
+        if ($command->getName() === "helpme") {
             $message = $this->getConfig()->get("message");
-            $msg = str_replace("{line}", PHP_EOL, $message);
+            $msg = str_replace("{line}", "\n", $message);
             if($sender instanceof Player){
                 $sender->sendMessage($msg);
             }
