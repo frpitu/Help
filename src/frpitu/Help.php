@@ -23,11 +23,11 @@ final class Help extends PluginBase
     function onLoad()
     {
         $info = [
-            '§8>' . str_repeat('§b-_', 15) . '§8<',
-            '§cHelp plugin by: §7frpitu',
-            '§bTwitter: §f@frpitu',
-            '§0Git§fhub§7: §f@frpitu',
-            '§8>' . str_repeat('§b-_', 15) . '§8<'
+            '§8>' . str_repeat('§c-_', 20) . '§8<',
+            '               §cHelp plugin by: §7frpitu',
+            '               §bTwitter: §f@frpitu',
+            '               §0Git§fhub§7: §f@frpitu',
+            '§8>' . str_repeat('§c-_', 20) . '§8<'
         ];
 
         foreach ($info as $msg) {
@@ -35,9 +35,14 @@ final class Help extends PluginBase
         }
 
         $this->getLogger()->notice(self::CONSOLE_PREFIX . ' §bThe plugin is loading. Please wait and do not stop the console.');
-
-        $this->saveResource("config.yml");
-        $this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML);
+        
+        $configFile = $this->getDataFolder() . "config.yml";
+        
+        if (!file_exists($configFile)) {
+            $this->saveDefaultConfig();
+        }
+        
+        $this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML);$configFile = $this->getDataFolder() . "config.yml";
 
         if ($this->getServer()->getCommandMap()->getCommand("help") !== null) {
             $this->getServer()->getCommandMap()->getCommand("help")->setLabel("help");
