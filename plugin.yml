@@ -1,0 +1,13 @@
+name: Help
+description: 'When executed, it displays the message choose in the plugin configuration, showing the server information'
+version: v1 FINAL
+main: frpitu\Help
+load: STARTUP
+api: [1.0.0, 2.0.0, 3.0.0]
+author: frpitu
+website: 'https://github.com/frpitu'
+commands:
+ helpme:
+  description: 'Help plugin command'
+  default: true
+  aliases: [ajuda]
