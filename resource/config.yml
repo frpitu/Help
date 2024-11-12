@@ -1,8 +1,25 @@
-# _______________________________________
+# ________________________________________
 # Help plugin for MCPE 0.14.3 x 0.15.10
 # By: Luiz Guilherme (frpitu)
 # Github: https://github.com/frpitu
 # Twitter: https://twitter.com/frpitu
 # Discord: frpitu#1085 | frpitu
 # ________________________________________
-message: 
+# Message configuration, list of variables below ↓↓↓:
+# {EOL} (end of line)
+# {PLAYER} (Player name)
+# {DATE} (date format)
+# {C} (count in lobby)
+# {O} (online players count)
+# ________________________________________
+message: '§8====( §bHE§cLP §8)===={EOL}§8> §bDiscord: §cdsc.gg/egg_server{EOL}§8> §bTwitter: §c@egg_twitter'
+# ________________________________________
+# Here is the date format setting if it is from the
+# Unied States (Normal Data Format) or Brazil Date
+# Format, To change is: 0 (USA) and 1 (BR)
+# ________________________________________
+dateFormat: 0
+# ________________________________________
+# Here is the message when the command is executed,
+# is send if Sender is not a player
+notplayer_msg: '§8> §cOnly for players'
